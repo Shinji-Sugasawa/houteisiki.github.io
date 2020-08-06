@@ -13,7 +13,7 @@ public class Nibunhou {
         while(!(Math.abs(a-b)<eps)) {
 
         	c = (a+b)/2.0;
-        	System.out.println( i+ ":" +c );//ŒvŽZ‰ñ”o—Í
+        	System.out.println( i+ ":" +c );//ŒvŽZo—Í
 
             if(func_y(c) * func_y(a)<0) {
             	b = c;
