@@ -14,7 +14,7 @@ public class Newton {
 		int i = 1;
 		double b = .0;
 
-		while(i>=1) {
+		while(0<i) {
 			b = a-func_y(a) / func_z(a);
 
         	System.out.println( i+ ":" + b );//ŒvŽZo—Í
