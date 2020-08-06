@@ -7,7 +7,7 @@ public class Nibunhou {
         return x*x*x + x -1.0;//求めたい方程式
     }
 
-    double calc(double a, double b, double eps)
+    double syori(double a, double b, double eps)
     {
         int i=1;
         double c=.0;
@@ -33,7 +33,7 @@ public class Nibunhou {
         {
             Nibunhou bm = new Nibunhou();
           //(原点,初期値,範囲誤差)
-            double ans = bm.calc(0.0, 1.0, 0.0001);
+            double ans = bm.syori(0.0, 1.0, 0.0001);
 
     		System.out.println("\n近似解:" +ans);//計算回数出力
         }
