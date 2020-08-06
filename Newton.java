@@ -1,5 +1,5 @@
 package houteisiki;
-
+//git用
 public class Newton {
 
 	double func_y(double x) {
@@ -33,7 +33,9 @@ public class Newton {
 	}
 	public static void main (String[] args){
         Newton kai = new Newton();
-
-        double ans = kai.syori(1.0, 0.0001);// 解を計算(初期値, 収束条件)
+        
+        double eps =　0.0001
+        
+        double ans = kai.syori(1.0, eps);// 解を計算(初期値, 許容誤差)
     }
 }
