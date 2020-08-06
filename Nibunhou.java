@@ -22,7 +22,6 @@ public class Nibunhou {
             	a = c;
             	}
             i++;
-
         }
         return c;
     }
