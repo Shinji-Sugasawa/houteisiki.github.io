@@ -4,7 +4,7 @@ public class Nibunhou {
 
 	double func_y(double x)
     {
-        return x*x*x + x -1.0;
+        return x*x*x + x -1.0;//‹‚ß‚½‚¢•û’ö®
     }
 
     double calc(double a, double b, double eps)
