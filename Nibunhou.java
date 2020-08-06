@@ -28,10 +28,10 @@ public class Nibunhou {
     }
 
         public static void main (String[] args) {
-            Nibunhou bm = new Nibunhou();
+            Nibunhou kai = new Nibunhou();
 
-            double ans = bm.syori(0.0, 1.0, 0.0001);//(原点,初期値,範囲誤差)
+            double ans = kai.syori(0.0, 1.0, 0.0001);//(原点,初期値,範囲誤差)
 
-    		System.out.println("\n近似解:" +ans);//計算回数出力
+    		System.out.println("\n近似解:" +ans);// 結果表示
         }
 }
