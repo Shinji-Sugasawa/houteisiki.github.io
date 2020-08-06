@@ -9,11 +9,14 @@ public class Nibunhou {
 
     double calc(double a, double b, double eps)
     {
-        int i=0;
+        int i=1;
         double c=.0;
 
         while(!(Math.abs(a-b)<eps)) {
+
         	c = (a+b)/2.0;
+        	System.out.println( i+ ":" +c );//計算回数出力
+
             if(func_y(c) * func_y(a)<0) {
             	b = c;
             }
@@ -21,19 +24,17 @@ public class Nibunhou {
             	a = c;
             	}
             i++;
-            if(i>=3) {
-            	System.out.println( (i-2)+ ":" +c );//計算回数出力
-            }
 
         }
-        return i;
+        return c;
     }
 
         public static void main (String[] args) throws java.lang.Exception
         {
             Nibunhou bm = new Nibunhou();
           //(原点,初期値,範囲誤差)
-            double kaisu = bm.calc(0.0, 4.0, 0.0001);
+            double ans = bm.calc(0.0, 1.0, 0.0001);
 
+    		System.out.println("\n近似解:" +ans);//計算回数出力
         }
 }
