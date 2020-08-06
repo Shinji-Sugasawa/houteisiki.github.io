@@ -2,35 +2,38 @@ package houteisiki;
 
 public class Nibunhou {
 
-	class func_y(double x) {
-		return x*x*x + x - 1.0;
-	}
-	class keisan(double a ,double b, double eps) {
+	double func_y(double x)
+    {
+        return x*x*x + x -1.0;
+    }
 
-		int i = 0;
+    double calc(double a, double b, double eps)
+    {
+        int i=0;
+        double c=.0;
 
-		while(Math.abs(a-b) < eps) {
+        while(!(Math.abs(a-b)<eps)) {
+        	c = (a+b)/2.0;
+            if(func_y(c) * func_y(a)<0) {
+            	b = c;
+            }
+            else {
+            	a = c;
+            	}
+            i++;
+            if(i>=3) {
+            	System.out.println( (i-2)+ ":" +c );//計算回数出力
+            }
 
-			double c = ( a + b ) /2.0;
+        }
+        return i;
+    }
 
-			if (( func_y(c) * func_y(a) ) < 0 ) {
-				b = c;
-			}
-			else {
-				a = c;
-			}
-			System.out.println( i+ ":" +c );//計算回数出力
-		}
-		return i;
-	}
+        public static void main (String[] args) throws java.lang.Exception
+        {
+            Nibunhou bm = new Nibunhou();
+          //(原点,初期値,範囲誤差)
+            double kaisu = bm.calc(0.0, 4.0, 0.0001);
 
-	public static void main(String args[]) {
-
-		Nibunhou kai = new Nibunhou();
-
-		int ans = kai.keisan(0.0, 4.0, 0.001)ans;//(原点,初期値,範囲誤差)
-
-		System.out.println("計算回数:" +ans);//計算回数出力
-	}
-
+        }
 }
