@@ -10,10 +10,10 @@ public class Nibunhou {
         int i=1;
         double c=.0;
 
-        while(!(Math.abs(a-b)<eps)) {
+        while(Math.abs(a-b)>eps) {
 
         	c = (a+b)/2.0;
-        	System.out.println( i+ ":" +c );//計算出力
+        	System.out.println( i+ ":" +c );//計算回数出力
 
             if(func_y(c) * func_y(a)<0) {
             	b = c;
@@ -22,6 +22,7 @@ public class Nibunhou {
             	a = c;
             	}
             i++;
+
         }
         return c;
     }
