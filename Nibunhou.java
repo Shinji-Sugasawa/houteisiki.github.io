@@ -30,7 +30,10 @@ public class Nibunhou {
         public static void main (String[] args) {
             Nibunhou kai = new Nibunhou();
 
-            double ans = kai.syori(0.0, 1.0, 0.0001);//(原点,初期値,範囲誤差)
+            double eps = 0.0001;//許容誤差
+            double a = 0.0, b = 1.0;
+
+            double ans = kai.syori(a, b, eps);//(初期値,許容誤差)
 
     		System.out.println("\n近似解:" +ans);// 結果表示
         }
