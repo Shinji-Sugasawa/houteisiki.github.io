@@ -32,11 +32,11 @@ public class Newton {
 		return b;
 	}
 	public static void main (String[] args){
-        Newton kai = new Newton();
+        	Newton kai = new Newton();
+    		System.out.println("ニュートン法" );
+       		double eps = 0.0001;//許容誤差 //例0.000001;
+        	double a = 1.0;
 
-        double eps = 0.0001;//許容誤差 //例0.000001;
-        double a = 1.0;
-
-        double ans = kai.syori(a, eps);// 解を計算(初期値, 収束条件)
-    }
+        	double ans = kai.syori(a, eps);// 解を計算(初期値, 収束条件)
+    	}
 }
