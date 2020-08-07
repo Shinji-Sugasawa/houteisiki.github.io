@@ -29,7 +29,7 @@ public class Nibunhou {
 
         public static void main (String[] args) {
             Nibunhou kai = new Nibunhou();
-
+    		System.out.println("ニュートン法" );
             double eps = 0.0001;//許容誤差 //例0.000001;
             double a = 0.0, b = 1.0;
 
