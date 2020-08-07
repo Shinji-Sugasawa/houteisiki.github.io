@@ -1,10 +1,10 @@
 package houteisiki;
-//git用
+
 public class Newton {
 
 	double func_y(double x) {
 
-		return x*x*x + x -1.0;//求めたい方程式
+        return Math.pow(x, 3)+ x -1.0;//求めたい方程式
 	}
 	double func_z(double x) {
 
@@ -33,9 +33,10 @@ public class Newton {
 	}
 	public static void main (String[] args){
         Newton kai = new Newton();
-        
-        double eps =　0.0001
-        
-        double ans = kai.syori(1.0, eps);// 解を計算(初期値, 許容誤差)
+
+        double eps = 0.0001;//許容誤差 //例0.000001;
+        double a = 1.0;
+
+        double ans = kai.syori(a, eps);// 解を計算(初期値, 収束条件)
     }
 }
